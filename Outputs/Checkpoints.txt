@@ -1,0 +1,289 @@
+Device: cpu
+PyTorch version: 2.7.0+cpu
+Training start: 2026-04-19 14:20:12
+
+
+======================================================================
+CS511 - Computer Vision Assignment 1: CNN Color Analysis
+======================================================================
+Hardware: cpu
+Random Seed: 42
+Max Epochs: 10
+Batch Size: 128
+Learning Rate: 0.001
+Weight Decay: 0.0001
+===============================================================
+📊 TASK A & C: Training RGB Baseline...
+
+============================================================
+Training with RGB color space
+============================================================
+
+Train: 45000 | Val: 5000 | Test: 10000
+Max epochs: 10 | Early stopping patience: 3
+
+Training Progress:
+--------------------------------------------------------------------------------
+                                                                       
+Epoch  1/10 | Train Loss: 1.4639 | Train Acc: 46.40% | Val Loss: 1.3854 | Val Acc: 51.78% | Gap: -5.38%
+                                                                     
+Epoch  2/10 | Train Loss: 0.9920 | Train Acc: 64.89% | Val Loss: 0.9813 | Val Acc: 67.22% | Gap: -2.33%
+                                                                     
+Epoch  3/10 | Train Loss: 0.7937 | Train Acc: 72.30% | Val Loss: 0.7156 | Val Acc: 74.76% | Gap: -2.46%
+                                                                     
+Epoch  4/10 | Train Loss: 0.6694 | Train Acc: 77.00% | Val Loss: 0.7437 | Val Acc: 73.86% | Gap: 3.14%
+                                                                         
+Epoch  5/10 | Train Loss: 0.6018 | Train Acc: 79.51% | Val Loss: 0.6952 | Val Acc: 75.92% | Gap: 3.59%
+                                                                     
+Epoch  6/10 | Train Loss: 0.5498 | Train Acc: 81.23% | Val Loss: 0.6286 | Val Acc: 78.42% | Gap: 2.81%
+                                                                     
+Epoch  7/10 | Train Loss: 0.4981 | Train Acc: 82.94% | Val Loss: 0.4833 | Val Acc: 83.04% | Gap: -0.10%
+                                                                     
+Epoch  8/10 | Train Loss: 0.4687 | Train Acc: 84.19% | Val Loss: 0.6138 | Val Acc: 78.64% | Gap: 5.55%
+                                                                     
+Epoch  9/10 | Train Loss: 0.4400 | Train Acc: 85.19% | Val Loss: 0.6140 | Val Acc: 79.08% | Gap: 6.11%
+                                                                      
+Epoch 10/10 | Train Loss: 0.4131 | Train Acc: 86.00% | Val Loss: 0.4439 | Val Acc: 84.76% | Gap: 1.24%
+
+Training completed in 22770.41 seconds
+Best validation accuracy: 84.76% at epoch 10
+Final test accuracy: 83.77%
+Good generalization! Train-Val gap = 1.24%
+
+
+=========================================================================================================================================
+Training Validation of LSV and LAB and Comparison with RGB
+
+Device: cpu
+
+======================================================================
+TRAINING HSV MODEL
+======================================================================
+
+============================================================
+Training HSV model
+============================================================
+Loading CIFAR-10 dataset...
+100%|██████████| 170M/170M [04:03<00:00, 700kB/s]  
+Training for 5 epochs...
+--------------------------------------------------------------------------------
+
+Epoch 1/5 - Training...
+  Batch 50/352 - Loss: 1.7487
+  Batch 100/352 - Loss: 1.7098
+  Batch 150/352 - Loss: 1.7203
+  Batch 200/352 - Loss: 1.3991
+  Batch 250/352 - Loss: 1.2876
+  Batch 300/352 - Loss: 1.3791
+  Batch 350/352 - Loss: 1.2439
+  Validating...
+
+============================================================
+Epoch 1/5 Summary:
+  Train Loss: 1.5619 | Train Acc: 42.61%
+  Val Loss:   1.3246 | Val Acc:   51.26%
+  Gap: -8.65%
+============================================================
+
+Epoch 2/5 - Training...
+  Batch 50/352 - Loss: 1.3417
+  Batch 100/352 - Loss: 1.1459
+  Batch 150/352 - Loss: 1.1130
+  Batch 200/352 - Loss: 1.1139
+  Batch 250/352 - Loss: 0.9367
+  Batch 300/352 - Loss: 0.9220
+  Batch 350/352 - Loss: 0.9697
+  Validating...
+
+============================================================
+Epoch 2/5 Summary:
+  Train Loss: 1.0791 | Train Acc: 61.48%
+  Val Loss:   1.1746 | Val Acc:   62.32%
+  Gap: -0.84%
+============================================================
+
+Epoch 3/5 - Training...
+  Batch 50/352 - Loss: 1.0725
+  Batch 100/352 - Loss: 0.8970
+  Batch 150/352 - Loss: 0.8177
+  Batch 200/352 - Loss: 0.8798
+  Batch 250/352 - Loss: 0.6725
+  Batch 300/352 - Loss: 0.9444
+  Batch 350/352 - Loss: 0.7216
+  Validating...
+
+============================================================
+Epoch 3/5 Summary:
+  Train Loss: 0.8493 | Train Acc: 70.26%
+  Val Loss:   0.8582 | Val Acc:   70.56%
+  Gap: -0.30%
+============================================================
+
+Epoch 4/5 - Training...
+  Batch 50/352 - Loss: 0.6022
+  Batch 100/352 - Loss: 0.7262
+  Batch 150/352 - Loss: 0.8047
+  Batch 200/352 - Loss: 0.7812
+  Batch 250/352 - Loss: 0.5133
+  Batch 300/352 - Loss: 0.6696
+  Batch 350/352 - Loss: 0.8635
+  Validating...
+
+============================================================
+Epoch 4/5 Summary:
+  Train Loss: 0.7162 | Train Acc: 75.57%
+  Val Loss:   0.8067 | Val Acc:   72.64%
+  Gap: 2.93%
+============================================================
+
+Epoch 5/5 - Training...
+  Batch 50/352 - Loss: 0.6064
+  Batch 100/352 - Loss: 0.6256
+  Batch 150/352 - Loss: 0.5546
+  Batch 200/352 - Loss: 0.5375
+  Batch 250/352 - Loss: 0.6632
+  Batch 300/352 - Loss: 0.6922
+  Batch 350/352 - Loss: 0.5444
+  Validating...
+
+============================================================
+Epoch 5/5 Summary:
+  Train Loss: 0.6391 | Train Acc: 78.04%
+  Val Loss:   0.6580 | Val Acc:   77.34%
+  Gap: 0.70%
+============================================================
+
+Testing on 79 batches...
+  Test batch 20/79
+  Test batch 40/79
+  Test batch 60/79
+
+============================================================
+HSV TRAINING COMPLETE!
+============================================================
+Best Validation Accuracy: 77.34%
+Final Test Accuracy: 77.71%
+Training Time: 426.4 minutes
+Model saved to: outputs\checkpoints\best_hsv.pt
+
+======================================================================
+TRAINING LAB MODEL
+======================================================================
+
+============================================================
+Training LAB model
+============================================================
+Loading CIFAR-10 dataset...
+
+Training for 5 epochs...
+--------------------------------------------------------------------------------
+
+Epoch 1/5 - Training...
+  Batch 50/352 - Loss: 1.7542
+  Batch 100/352 - Loss: 1.5742
+  Batch 150/352 - Loss: 1.5701
+  Batch 200/352 - Loss: 1.2433
+  Batch 250/352 - Loss: 1.3493
+  Batch 300/352 - Loss: 1.1232
+  Batch 350/352 - Loss: 1.2825
+  Validating...
+
+============================================================
+Epoch 1/5 Summary:
+  Train Loss: 1.4667 | Train Acc: 46.47%
+  Val Loss:   1.3296 | Val Acc:   53.72%
+  Gap: -7.25%
+============================================================
+
+Epoch 2/5 - Training...
+  Batch 50/352 - Loss: 1.0480
+  Batch 100/352 - Loss: 1.1845
+  Batch 150/352 - Loss: 1.0074
+  Batch 200/352 - Loss: 1.1168
+  Batch 250/352 - Loss: 0.9810
+  Batch 300/352 - Loss: 0.9232
+  Batch 350/352 - Loss: 0.7474
+  Validating...
+
+============================================================
+Epoch 2/5 Summary:
+  Train Loss: 0.9694 | Train Acc: 65.74%
+  Val Loss:   0.9860 | Val Acc:   66.60%
+  Gap: -0.86%
+============================================================
+
+Epoch 3/5 - Training...
+  Batch 50/352 - Loss: 0.7990
+  Batch 100/352 - Loss: 0.6888
+  Batch 150/352 - Loss: 0.8387
+  Batch 200/352 - Loss: 0.6787
+  Batch 250/352 - Loss: 0.9811
+  Batch 300/352 - Loss: 0.8152
+  Batch 350/352 - Loss: 0.8991
+  Validating...
+
+============================================================
+Epoch 3/5 Summary:
+  Train Loss: 0.7754 | Train Acc: 73.12%
+  Val Loss:   0.8199 | Val Acc:   72.38%
+  Gap: 0.74%
+============================================================
+
+Epoch 4/5 - Training...
+  Batch 50/352 - Loss: 0.6465
+  Batch 100/352 - Loss: 0.4976
+  Batch 150/352 - Loss: 0.6698
+  Batch 200/352 - Loss: 0.6199
+  Batch 250/352 - Loss: 0.7145
+  Batch 300/352 - Loss: 0.6069
+  Batch 350/352 - Loss: 0.5050
+  Validating...
+
+============================================================
+Epoch 4/5 Summary:
+  Train Loss: 0.6666 | Train Acc: 77.23%
+  Val Loss:   0.7969 | Val Acc:   74.40%
+  Gap: 2.83%
+============================================================
+
+Epoch 5/5 - Training...
+  Batch 50/352 - Loss: 0.5101
+  Batch 100/352 - Loss: 0.7252
+  Batch 150/352 - Loss: 0.6088
+  Batch 200/352 - Loss: 0.5639
+  Batch 250/352 - Loss: 0.5180
+  Batch 300/352 - Loss: 0.5233
+  Batch 350/352 - Loss: 0.4751
+  Validating...
+
+============================================================
+Epoch 5/5 Summary:
+  Train Loss: 0.5896 | Train Acc: 79.83%
+  Val Loss:   0.6719 | Val Acc:   78.22%
+  Gap: 1.61%
+============================================================
+
+Testing on 79 batches...
+  Test batch 20/79
+  Test batch 40/79
+  Test batch 60/79
+
+============================================================
+LAB TRAINING COMPLETE!
+============================================================
+Best Validation Accuracy: 78.22%
+Final Test Accuracy: 77.43%
+Training Time: 112.0 minutes
+Model saved to: outputs\checkpoints\best_lab.pt
+
+======================================================================
+FINAL COMPARISON - TASK C COMPLETE
+======================================================================
+
+Color Space  Test Accuracy       
+-----------------------------------
+RGB           83.77%
+HSV           77.71%
+LAB           77.43%
+
+Best performing color space: RGB (83.77%)
